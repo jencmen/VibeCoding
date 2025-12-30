@@ -76,7 +76,7 @@ export const AIAdvisor: React.FC<Props> = ({ isCompact = false }) => {
   }
 
   return (
-    <section id="advisor" className="py-16 bg-white rounded-3xl border border-gray-100 shadow-xl overflow-hidden my-16">
+    <section id="advisor" className="py-8 bg-white rounded-3xl border border-gray-100 shadow-xl overflow-hidden">
       <div className="px-8 pb-8 border-b border-gray-100">
         <h2 className="text-3xl font-bold mb-2">AI Advisor למנהלי מוצר</h2>
         <p className="text-gray-600">יש לך שאלות על המעבר לעולם הבנייה העצמאית במשרד ממשלתי? שאל את ה-AI המומחה שלנו.</p>
