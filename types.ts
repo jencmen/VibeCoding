@@ -12,7 +12,9 @@ export interface ExperimentResult {
   description: string;
   speed: number;
   accuracy: number;
-  innovation: number;
+  ux: number;
+  maintenance: number;
+  security: number;
   pros: string[];
   cons: string[];
 }
