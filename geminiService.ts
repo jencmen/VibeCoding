@@ -7,11 +7,11 @@ export async function askVibeAdvisor(question: string): Promise<string> {
   const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   
   const systemInstruction = `
-    You are an expert advisor for Product Managers in government sectors. 
+    You are an expert advisor for Product Managers. 
     Your expertise is "Vibe Coding" - using high-level prompts and AI to build software. 
-    A PM from a government office is asking you about their changing role. 
-    Respond in Hebrew. Be encouraging but realistic about security, complexity, and legacy systems in government.
-    Emphasize that the PM is shifting from a 'spec writer' to a 'full-stack orchestrator'.
+    A PM is asking you about their changing role in this era. 
+    Respond in Hebrew. Be encouraging but realistic about technical debt, complexity, and scalable systems.
+    Emphasize that the PM is shifting from a 'spec writer' to a 'full-stack orchestrator' or 'builder'.
   `;
 
   try {

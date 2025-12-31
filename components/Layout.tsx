@@ -12,8 +12,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               V
             </div>
             <div>
-              <h1 className="text-lg font-bold leading-none">PM Dashboard</h1>
-              <span className="text-[10px] text-indigo-500 font-bold uppercase tracking-widest">Government Edition</span>
+              <h1 className="text-lg font-bold leading-none">PM Role in vibe coding era</h1>
+              <span className="text-[10px] text-indigo-500 font-bold uppercase tracking-widest">Innovation Dashboard</span>
             </div>
           </div>
           
@@ -22,7 +22,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             <div className="h-4 w-px bg-gray-200"></div>
             <div className="flex items-center gap-2 bg-indigo-50 px-3 py-1.5 rounded-full border border-indigo-100">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-[10px] font-bold text-indigo-700 uppercase">Live Vibe Session</span>
+              <span className="text-[10px] font-bold text-indigo-700 uppercase">Live Build Session</span>
             </div>
           </div>
         </div>
