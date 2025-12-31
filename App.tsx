@@ -1,17 +1,17 @@
 
 import React from 'react';
-import { Layout } from './components/Layout';
-import { MethodologyCard } from './components/MethodologyCard';
-import { ToolsMatrix } from './components/ToolsMatrix';
-import { EXPERIMENT_DATA } from './constants';
+import { Layout } from './components/Layout.tsx';
+import { MethodologyCard } from './components/MethodologyCard.tsx';
+import { ToolsMatrix } from './components/ToolsMatrix.tsx';
+import { EXPERIMENT_DATA } from './constants.tsx';
 
 const App: React.FC = () => {
   return (
     <Layout>
-      {/* Chapter 1: The Question */}
+      {/* Chapter 1: Hero */}
       <section className="min-h-[70vh] flex flex-col items-center justify-center text-center mb-24">
         <div className="inline-block px-4 py-1.5 mb-8 text-sm font-bold tracking-widest text-indigo-600 uppercase bg-indigo-50 rounded-full border border-indigo-100">
-          פרק 1: השאלה הגדולה
+          פרק 1: המהפכה
         </div>
         <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-8 leading-tight">
           PM Role in vibe coding era:<br />
@@ -53,6 +53,7 @@ const App: React.FC = () => {
           <ToolsMatrix />
         </div>
 
+        {/* Selected Stack Container */}
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <h3 className="text-2xl font-bold text-gray-900">הסטאק שבחרתי לניסוי</h3>
@@ -66,7 +67,7 @@ const App: React.FC = () => {
             </div>
             <div className="bg-slate-900 p-10 rounded-[2.5rem] text-white shadow-xl hover:translate-y-[-4px] transition-all group">
               <div className="w-16 h-16 bg-white/10 rounded-2xl mb-6 flex items-center justify-center text-white font-bold text-xs border border-white/20 group-hover:bg-white/20 transition-colors">GOOGLE</div>
-              <h3 className="text-xl font-bold mb-3">Google AI Studio</h3>
+              <h3 className="text-xl font-bold mb-3 text-white">Google AI Studio</h3>
               <p className="text-indigo-100/70 leading-relaxed text-sm">סביבת העבודה המחקרית. המוח שמאחורי הפרומפטים ומודלי Gemini. כאן נבנה ההיגיון העסקי המורכב.</p>
             </div>
           </div>
@@ -80,7 +81,7 @@ const App: React.FC = () => {
             פרק 4: ניתוח תוצאות וצילומי מסך
           </div>
           <h2 className="text-3xl font-bold">איך זה נראה בפועל?</h2>
-          <p className="text-gray-500 mt-4">צילומי מסך של התוצאות מכל אחת מארבע המתודולוגיות</p>
+          <p className="text-gray-500 mt-4">המחשה ויזואלית של התוצאות מכל אחת מהדרכים</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -94,12 +95,11 @@ const App: React.FC = () => {
               <div className="w-full h-full p-4 space-y-2 opacity-40">
                 <div className="h-4 bg-gray-300 w-1/3 rounded"></div>
                 <div className="h-20 bg-gray-200 w-full rounded"></div>
-                <div className="h-4 bg-gray-300 w-1/2 rounded"></div>
               </div>
               <div className="absolute inset-0 flex items-center justify-center bg-white/60 backdrop-blur-[1px]">
                 <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-100 text-center">
-                  <p className="text-xs font-bold text-gray-500">לוגיקה בסיסית אך לא יציבה</p>
-                  <p className="text-[10px] text-gray-400 mt-1">המודל מנחש פערים ולא תמיד מדייק</p>
+                  <p className="text-xs font-bold text-gray-500">לוגיקה חסרה</p>
+                  <p className="text-[10px] text-gray-400 mt-1">ה-AI מנחש וטועה המון</p>
                 </div>
               </div>
             </div>
@@ -112,19 +112,17 @@ const App: React.FC = () => {
             </div>
             <div className="aspect-video bg-white rounded-2xl border border-emerald-100 shadow-inner flex items-center justify-center relative overflow-hidden">
               <div className="w-full h-full p-4 space-y-3">
-                <div className="flex justify-between">
-                  <div className="h-4 bg-emerald-100 w-1/4 rounded"></div>
-                  <div className="h-4 bg-emerald-200 w-4 rounded-full"></div>
+                <div className="flex justify-between items-center">
+                  <div className="h-3 bg-emerald-100 w-1/4 rounded"></div>
+                  <div className="w-4 h-4 bg-emerald-200 rounded-full"></div>
                 </div>
-                <div className="grid grid-cols-3 gap-2">
-                  <div className="h-12 bg-emerald-50 rounded"></div>
-                  <div className="h-12 bg-emerald-50 rounded"></div>
-                  <div className="h-12 bg-emerald-50 rounded"></div>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="h-20 bg-emerald-50 rounded-xl"></div>
+                  <div className="h-20 bg-emerald-50 rounded-xl"></div>
                 </div>
-                <div className="h-24 bg-emerald-50 w-full rounded"></div>
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-xs font-bold text-emerald-800 bg-white/80 px-4 py-2 rounded-full shadow-md border border-emerald-200">מוצר מוגמר, מדויק ועקבי</p>
+                <p className="text-xs font-bold text-emerald-800 bg-white/90 px-4 py-2 rounded-full shadow-md border border-emerald-200">מוצר מלוטש ומדויק</p>
               </div>
             </div>
           </div>
@@ -136,13 +134,12 @@ const App: React.FC = () => {
             </div>
             <div className="aspect-video bg-gradient-to-br from-indigo-500/5 to-pink-500/5 rounded-2xl border border-gray-100 flex items-center justify-center relative overflow-hidden">
               <div className="w-full h-full p-6 flex flex-col items-center justify-center space-y-4">
-                <div className="w-16 h-16 rounded-3xl vibe-gradient opacity-30 shadow-2xl"></div>
-                <div className="h-4 bg-indigo-100 w-1/2 rounded"></div>
+                <div className="w-12 h-12 rounded-2xl vibe-gradient opacity-30"></div>
+                <div className="h-3 bg-indigo-100 w-1/2 rounded"></div>
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-white/95 p-4 rounded-xl shadow-lg border border-pink-100 text-center">
-                   <p className="text-xs font-bold text-rose-600">עיצוב "וואו", פונקציונליות "אוי"</p>
-                   <p className="text-[10px] text-gray-400 mt-1">יפה למצגת, לא לעבודה</p>
+                   <p className="text-xs font-bold text-rose-600">עיצוב מרשים, אפס פונקציה</p>
                 </div>
               </div>
             </div>
@@ -155,21 +152,19 @@ const App: React.FC = () => {
             </div>
             <div className="aspect-video bg-white rounded-2xl border-2 border-indigo-200 shadow-xl flex items-center justify-center relative overflow-hidden">
               <div className="w-full h-full p-4 space-y-4">
-                <div className="h-6 bg-indigo-50 w-1/3 rounded"></div>
-                <div className="flex gap-2">
-                  <div className="w-full h-32 bg-indigo-50/20 rounded-xl border border-indigo-100"></div>
-                </div>
+                <div className="h-5 bg-indigo-50 w-1/3 rounded"></div>
+                <div className="w-full h-32 bg-indigo-50/20 rounded-xl border border-indigo-100"></div>
               </div>
-              <div className="absolute top-2 right-2 bg-indigo-600 text-white text-[8px] px-2 py-0.5 rounded-full font-bold uppercase animate-pulse">The Winner</div>
+              <div className="absolute top-2 right-2 bg-indigo-600 text-white text-[8px] px-2 py-0.5 rounded-full font-bold uppercase animate-pulse">Winner</div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-xs font-bold text-indigo-900 bg-white/90 px-4 py-2 rounded-full shadow-md border border-indigo-100">איזון מושלם בין מהירות לדיוק לוגי</p>
+                <p className="text-xs font-bold text-indigo-900 bg-white/90 px-4 py-2 rounded-full shadow-md border border-indigo-100">איזון אופטימלי</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Chapter 5: The Verdict (Re-numbered) */}
+      {/* Chapter 5: The Verdict */}
       <section className="mb-24 bg-slate-900 text-white p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
         <div className="relative z-10">
           <div className="inline-block px-4 py-1 mb-8 text-[10px] font-bold tracking-widest text-indigo-300 uppercase bg-white/10 rounded-lg border border-white/20">
@@ -179,7 +174,7 @@ const App: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="space-y-6">
               <p className="text-xl text-indigo-100 leading-relaxed font-light">
-                מנהל המוצר של 2025 כבר לא זקוק לצוות פיתוח כדי לבנות MVP, להוכיח רעיון או לפתור בעיה דחופה. 
+                מנהל המוצר של 2025 כבר לא זקוק לצוות פיתוח כדי לבנות MVP או להוכיח רעיון. 
               </p>
               <div className="p-6 bg-white/10 rounded-2xl border border-white/10 backdrop-blur-md">
                 <h4 className="text-lg font-bold mb-2 text-indigo-300">התפקיד החדש: Product Architect</h4>
@@ -199,7 +194,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Chapter 6: The Limits (Re-numbered) */}
+      {/* Chapter 6: The Limits */}
       <section className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div className="space-y-8">
           <div className="inline-block px-3 py-1 text-[10px] font-bold tracking-widest text-rose-600 uppercase bg-rose-50 rounded-lg border border-rose-100">
